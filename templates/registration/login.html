@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Вход
+{% endblock %}
+
+{% block content %}
+    <div class="l-main-content">
+        <div class="ui-decor ui-decor_mirror ui-decor_sm-h bg-primary"></div>
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-outline-secondary">Вход</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
